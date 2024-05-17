@@ -1,6 +1,13 @@
 import streamlit as st
 import os
 from Senti import extract_video_id,analyze_sentiment,bar_chart,plot_sentiment
+
+import subprocess
+
+# Install NLTK
+subprocess.run(["pip3", "install", "YoutubeCommentScrapper"])
+
+
 from YoutubeCommentScrapper import save_video_comments_to_csv,get_channel_info,youtube,get_channel_id,get_video_stats
 
 
